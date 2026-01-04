@@ -14,3 +14,12 @@ mongo
 docker run -d -p27017:27017 --name mongo --network Ali-mongo -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=qwerty mongo 
 
 this is the complete cmd to make the specific containerod mongoDb on specific network
+
+-> So we can also create a .yaml file in which we define this whole comands easily instead of the terminal this file is created in the folder where index.js present
+
+docker-compose -f filename.yaml up -d // Used to run this file up means make container and start
+docker-compose -f filename.yaml down // means delete this container permanently
+
+in .yaml file how much containers we create docker can specifically create the new network first and transfer them there
+
+open express-mongo on localhost 8081 and add admin & pass there in feilds

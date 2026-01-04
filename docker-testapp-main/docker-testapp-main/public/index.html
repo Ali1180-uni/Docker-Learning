@@ -4,29 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css" type="text/css" />
-    <title>Home Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>University Portal</title>
 </head>
 <body>
-    <h1>Hi student, Welcome to XYZ University!</h1>
-    <p>You can sign up to the platform to access all important notes & lectures.</p>
+    <div class="container">
+        <div class="card">
+            <div class="logo">
+                <div class="logo-icon">🎓</div>
+            </div>
+            <h1>Welcome to University</h1>
+            <p class="subtitle">Access all your important notes, lectures & resources in one place</p>
 
-    <form action="/addUser" method="POST" target="_blank" id="signupForm">
-        <div class="field">
-            <label for="email">Email: </label>
-            <input type="text" placeholder="jane@email.com" name="email">
+            <form action="/addUser" method="POST" target="_blank" id="signupForm">
+                <div class="field">
+                    <label for="email">Email Address</label>
+                    <input type="email" placeholder="Ali" name="email" required>
+                </div>
+                <div class="field">    
+                    <label for="username">Full Name</label>
+                    <input type="text" placeholder="Ali Rehmani" name="username" required>
+                </div>
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="••••••••" name="password" required>
+                </div>
+                
+                <button id="formBtn">
+                    <span>Create Account</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </form>
+
+            <p class="footer-text">Already have an account? <a href="#">Sign in</a></p>
+            
+            <div class="tech-badges">
+                <span class="badge">🐳 Docker</span>
+                <span class="badge">🍃 MongoDB</span>
+                <span class="badge">⚡ Express.js</span>
+                <span class="badge">📦 Node.js</span>
+            </div>
         </div>
-        <div class="field">    
-        <label for="username">Username: </label>
-            <input type="text" placeholder="Jane Doe" name="username">
-        </div>
-        <div class="field">
-            <label for="password">Password: </label>
-            <input type="password" placeholder="password" name="password">
-        </div>
-        
-        <button id="formBtn">Create Account</button>
-        
-    </form>
+    </div>
 </body>
 
 </html>
