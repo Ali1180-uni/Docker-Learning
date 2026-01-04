@@ -1,0 +1,8 @@
+Basiclly Docker Network are used to connect the container with eachother which can be check by the 
+-> docker network ls
+
+C:\Users\Alirehmani>docker network ls
+NETWORK ID     NAME      DRIVER    SCOPE
+df58dffee4a5   bridge    bridge    local
+e15bc72cde12   host      host      local
+e642b8d6cbc0   none      null      local

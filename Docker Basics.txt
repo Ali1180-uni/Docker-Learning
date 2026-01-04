@@ -1,0 +1,43 @@
+Basically Docker is the Tool which helps to make the container with Specific Image Files
+-> It helps to Wrap up your application with Dependencies and you can run it anywhere
+-> Install Docker Desktop AMD64 first and write docker in cmd to verify
+-> DockerHub is the the platform like Github where we Find the images like Github codes
+-> Docker is similar to virtual machines but lightweight
+
+Basic Comands: 
+-> To Pull the Docker images: docker pull image-name
+-> To Pull the Specific Docker images: docker pull image-name:specific version
+-> check the images: docker images 
+---> Tags are defined as the version of the specific image
+-> To Make the Container of image: docker run image-name
+-> To Make the Container run in background of image: docker run -d image-name
+
+-> To check How much Containers are running: docker ps -a
+-> To use directly the input-output resources: docker run -it image-name
+
+-> to check the running containers: docker ps
+
+-> To start the Container: docker start ContainerName or ContainerID
+-> To stop the Container: docker stop ContainerName or ContainerID
+
+// To delete the Image we must delete its container first if it is created
+-> To remove the Docker image: docker rmi image-name/ID
+-> To remove the Docker Container: docker rm ContainerName/ID
+
+we can also add the environmental variables with our container
+-> docker run my-sql -e MY_SQL_PASSWORD = password 
+
+-> This is how we can give the specific name to a Container: docker run --name HiAli hello-world
+
+First output:
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.

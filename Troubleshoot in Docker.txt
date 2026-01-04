@@ -1,0 +1,15 @@
+ To checkout the errors and also to check the run flow of the image:
+ -> docker logs ContainerID
+ -> docker exec -it ContainerID/bin/bash
+ -> docker exec -it ContainerID/bin/sh
+ These Comands are used to access the advance directories of the Specific Container like env 
+ And This we can easily access the core files to checkout the specific files or data like versions
+
+ Docker vs Virtual Machine:
+ Docker images are basically made up for linix and with the help of docker desktop we can use them in windows and also docker can only 
+ virtualize the application layer but the virtual machine can virtualize both OS kernel thats why it is lightweight but have less power than VM
+
+
+ Docker performance is better on linix and also we must prefer the docker on linix at production
+ Docker Desktop is like the small VM on windows to run th docker images
+ 

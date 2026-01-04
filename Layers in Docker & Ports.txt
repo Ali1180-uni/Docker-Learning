@@ -1,0 +1,27 @@
+There is the concept of layers in the Docker 
+
+container  // changable
+   |
+Layer 2   //read-only
+   |
+Layer 1    // read-only
+   |
+Base Layer
+
+So when we are trying to donwload some different version of same image it just donwload the specific layers which are not present
+
+Ports: 
+There are also some Ports with each container on which they are running
+Machine Ports are Different and Container Ports are different
+eg:
+-> using mysql in 3306 [1]
+-> using mysql:8.0 in 3306 [2]
+So they are using the same port but not from machine but their indivisual Ports
+
+So if we want to connect the port of container with machine port 
+just because when the client request from port 8080 of machine it transfered to 3306 of container for development
+This process is called port binding and it is very important
+
+// now we never allocate the 8080 with any other container bcz it is our machine port
+-> docker run -p8080:3306 image-name
+-> docker run -d -e MY_SQL_PASSWORD=password --name HiAli -p8080:3306 mysql
