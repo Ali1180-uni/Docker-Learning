@@ -6,3 +6,20 @@ NETWORK ID     NAME      DRIVER    SCOPE
 df58dffee4a5   bridge    bridge    local
 e15bc72cde12   host      host      local
 e642b8d6cbc0   none      null      local
+
+Here we can se How these containers are connected with eachother and at where are they hosted
+
+We can also create a specific Network for our own container
+-> docker network create Ali-mongo
+
+C:\Users\Alire>docker network create Ali-mongo
+ff1959529f6128ab4ee1d6468f176ade74c75340160d3fc9a0a61fe09037c492
+
+C:\Users\Alire>docker network ls
+NETWORK ID     NAME        DRIVER    SCOPE
+ff1959529f61   Ali-mongo   bridge    local
+df58dffee4a5   bridge      bridge    local
+e15bc72cde12   host        host      local
+e642b8d6cbc0   none        null      local
+
+Something like this 
