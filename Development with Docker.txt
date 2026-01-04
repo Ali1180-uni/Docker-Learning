@@ -1,0 +1,16 @@
+Now we are Working with Specific Network we created Ali-mongo and now we are setup our mongoDb in it:
+Now when we are trying to setup mongoDb we must also define some important parameter with it also run in the detach mode
+
+like: 
+docker run -d \  -> to run in background/detach mode
+-p27017:27017 \  -> specific port for mongoDb
+--name mongo \  -> specific container name
+--network Ali-mongo \  -> network in which we want to create it
+-e MONGO_INITDB_ROOT_USERNAME=admin -> indivisual username
+-e MONGO_INITDB_ROOT_PASSWORD=qwerty  -> specific password
+mongo 
+
+
+docker run -d -p27017:27017 --name mongo --network Ali-mongo -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=qwerty mongo 
+
+this is the complete cmd to make the specific containerod mongoDb on specific network
